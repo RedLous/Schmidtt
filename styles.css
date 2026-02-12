@@ -5,6 +5,7 @@
       min-height: 100vh; /* makes sure border fills the screen */
       box-sizing: border-box; /* keeps border inside the viewport */
       } 
+
       body {
 font-family: Arial, sans-serif;
 text-align: center;
@@ -19,6 +20,26 @@ padding: 50px;
 /* Computador */
 @media (min-width: 1025px) {
 }
+
+body {
+font-family: Arial, sans-serif;
+margin: 0;
+padding: 30px;
+}
+.container {
+display: flex;
+flex-direction: column;
+gap: 20px;
+}
+.caixa {
+background-color: lightgray;
+padding: 40px;
+text-align: center;
+}
+/* Quando o ecrã for maior que 768px */
+@media (min-width: 768px) {
+}
+
       header{
         color:pink;
         background:purple;
