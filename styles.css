@@ -38,7 +38,11 @@ text-align: center;
 }
 /* Quando o ecrã for maior que 768px */
 @media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+  }
 }
+
 
       header{
         color:pink;
