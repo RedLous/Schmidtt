@@ -5,6 +5,20 @@
       min-height: 100vh; /* makes sure border fills the screen */
       box-sizing: border-box; /* keeps border inside the viewport */
       } 
+      body {
+font-family: Arial, sans-serif;
+text-align: center;
+padding: 50px;
+}
+/* Telemóvel */
+@media (max-width: 600px) {
+}
+/* Tablet */
+@media (min-width: 601px) and (max-width: 1024px) {
+}
+/* Computador */
+@media (min-width: 1025px) {
+}
       header{
         color:pink;
         background:purple;
