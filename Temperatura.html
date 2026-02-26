@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Medidor de Temperatura</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #f4f4f4;
+        text-align: center;
+        padding-top: 50px;
+    }
+
+    .container {
+        background: white;
+        width: 350px;
+        margin: auto;
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+        margin-bottom: 20px;
+    }
+
+    input {
+        width: 80px;
+        padding: 5px;
+        font-size: 16px;
+        text-align: center;
+    }
+
+    button {
+        padding: 8px 15px;
+        margin-left: 5px;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+        background-color: #007bff;
+        color: white;
+    }
+
+    .barra-container {
+        width: 100%;
+        height: 30px;
+        background: #ddd;
+        border-radius: 20px;
+        margin-top: 20px;
+        overflow: hidden;
+    }
+
+    .barra {
+        height: 100%;
+        width: 0%;
+        background: green;
+        transition: width 0.5s, background 0.5s;
+    }
+
+    #status {
+        margin-top: 15px;
+        font-weight: bold;
+    }
+
+    .frio { color: blue; }
+    .normal { color: green; }
+    .quente { color: red; }
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h2>Medidor de Temperatura</h2>
+
+    <input type="number" id="temperatura" placeholder="°C">
+    <button onclick="verificarTemperatura()">Verificar</button>
+
+    <div class="barra-container">
+        <div class="barra" id="barra"></div>
+    </div>
+
+    <div id="status">Aguardando valor...</div>
+</div>
+
+<script>
+function verificarTemperatura() {
+    let temp = parseFloat(document.getElementById("temperatura").value);
+    let barra = document.getElementById("barra");
+    let status = document.getElementById("status");
+
+    if (isNaN(temp)) {
+        status.innerText = "Digite um valor válido!";
+        return;
+    }
+
+    // Ajuste da largura (escala até 50°C)
+    let porcentagem = (temp / 50) * 100;
+    if (porcentagem > 100) porcentagem = 100;
+    if (porcentagem < 0) porcentagem = 0;
+
+    barra.style.width = porcentagem + "%";
+
+    // Verificação
+    if (temp < 15) {
+        barra.style.background = "blue";
+        status.innerText = "Temperatura Baixa ❄️";
+        status.className = "frio";
+    } 
+    else if (temp >= 15 && temp <= 30) {
+        barra.style.background = "green";
+        status.innerText = "Temperatura Normal ✅";
+        status.className = "normal";
+    } 
+    else {
+        barra.style.background = "red";
+        status.innerText = "Temperatura Alta 🔥";
+        status.className = "quente";
+    }
+}
+</script>
+
+</body>
+</html>
