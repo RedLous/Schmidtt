@@ -1,6 +1,6 @@
       body{
       margin: 0; /* removes default browser spacing */
-      background-color: lightcoral;
+      background-color: lightpink;
       border: 20px solid white; /* thickness, style, color */
       min-height: 100vh; /* makes sure border fills the screen */
       box-sizing: border-box; /* keeps border inside the viewport */
@@ -18,7 +18,7 @@ flex-direction: column;
 gap: 20px;
 }
 .caixa {
-background-color: lightpink;
+background-color: lightcoral;
 padding: 40px;
 text-align: center;
 }
