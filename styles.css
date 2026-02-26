@@ -48,26 +48,26 @@ padding: 50px;
       }
 
       h1{ /* title */
-        color:palevioletred;
+        color:white;
         background-color: purple;
         text-align:center;
         font-family:cursive;
         font-size: 50px;
       }
       h2{ /*text*/
-        color:violet;
+        color:plum;
         text-align:center;
         font-family:cursive;
         font-size: 30px;
       }
       h3{ /* subtitle */
-        color:pink;
+        color:violet;
         text-align:center;
         font-family:cursive;
         font-size: 40px;
       }
       h4{ /*SUBSUB*/
-        color:plum;
+        color:purple;
         text-align:center;
         font-family:verdana;
         font-size: 25px;
