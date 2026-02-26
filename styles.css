@@ -7,23 +7,9 @@
       } 
       body {
 font-family: Arial, sans-serif;
+margin: 0;
 text-align: center;
 padding: 50px;
-}
-/* Telemóvel */
-@media (max-width: 600px) {
-}
-/* Tablet */
-@media (min-width: 601px) and (max-width: 1024px) {
-}
-/* Computador */
-@media (min-width: 1025px) {
-}
-
-body {
-font-family: Arial, sans-serif;
-margin: 0;
-padding: 30px;
 }
 .container {
 display: flex;
@@ -36,13 +22,21 @@ padding: 40px;
 text-align: center;
 }
 
+/* Telemóvel */
+@media (max-width: 600px) {
+}
+/* Tablet */
+@media (min-width: 601px) and (max-width: 1024px) {
+}
+/* Computador */
+@media (min-width: 1025px) {
+}
 /* Quando o ecrã for maior que 768px */
 @media (min-width: 768px) {
   .container {
     flex-direction: row;
   }
 }
-
 
       header{
         color:lightpink;
