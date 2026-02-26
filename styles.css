@@ -124,52 +124,12 @@ padding: 0 20px;
 }
 
 /* GRID BASE (mobile first) */
-.grid {
-display: grid;
-gap: 20px;
-grid-template-columns: 1fr; /* 1 coluna por defeito */
-}
-
 /* CARD */
-.card {
-background-color: #fff;
-border-radius: 10px;
-padding: 20px;
-box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-}
-.card h2 {
-margin-top: 0;
-}
-.card p {
-color: #555;
-}
-
 /* BOTÃO/LINK */
-.btn {
-display: inline-block;
-
-margin-top: 10px;
-text-decoration: none;
-padding: 10px 14px;
-border-radius: 6px;
-background-color: #222;
-color: #fff;
-}
-
 /* Hover do botão */
-.btn:hover {
-opacity: 0.85;
-}
-
 /* Até 600px: (já está 1 coluna) */
-@media (max-width: 600px) {
-}
 /* 601px a 1024px: 2 colunas */
-@media (min-width: 601px) and (max-width: 1024px) {
-}
 /* A partir de 1025px: 3 colunas */
-@media (min-width: 1025px) {
-}
 
 footer{
  color: palevioletred;
