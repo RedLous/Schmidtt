@@ -49,19 +49,19 @@ padding: 50px;
 
       h1{ /* title */
         color:palevioletred;
-        background-color: purple;
+        background-color: plum;
         text-align:center;
         font-family:cursive;
         font-size: 40px;
       }
       h2{ /*text*/
-        color:plum;
+        color:whitesmoke;
         text-align:center;
         font-family:cursive;
         font-size: 30px;
       }
       h3{ /* subtitle */
-        color:purple;
+        color:plum;
         background-color: palevioletred;
         text-align:center;
         font-family:cursive;
