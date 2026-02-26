@@ -1,11 +1,10 @@
       body{
       margin: 0; /* removes default browser spacing */
-      background-color: rgb(151, 91, 151);
-      border: 20px solid white; /* thickness, style, color */
+      background-color: rgb(255, 209, 255);
+      border: 20px solid #ffffff; /* thickness, style, color */
       min-height: 100vh; /* makes sure border fills the screen */
       box-sizing: border-box; /* keeps border inside the viewport */
       } 
-
       body {
 font-family: Arial, sans-serif;
 text-align: center;
@@ -32,7 +31,7 @@ flex-direction: column;
 gap: 20px;
 }
 .caixa {
-background-color: lightgray;
+background-color: rgb(255, 255, 255);
 padding: 40px;
 text-align: center;
 }
@@ -46,8 +45,8 @@ text-align: center;
 
 
       header{
-        color:pink;
-        background:purple;
+        color:purple;
+        background:lightpink;
         text-align:center;
         font-family:cursive;
         font-size: 50px;
@@ -60,32 +59,30 @@ text-align: center;
       }
       h1{ /* title */
         color:pink;
-        background:purple;
         text-align:center;
         font-family:cursive;
         font-size: 50px;
       }
       h2{ /* menu datetitle*/
         color:purple;
-        background:pink;
         text-align:center;
         font-family:cursive;
         font-size: 30px;
       }
       h3{ /* subtitle */
-        color:rgb(255, 199, 243);
+        color:purple;
         text-align:center;
         font-family:cursive;
         font-size: 40px;
       }
       h4{ /* subsub */
-        color:rgb(255, 255, 255);
+        color:white;
         text-align:center;
         font-family:verdana;
         font-size: 25px;
       }
      h5{ /* text */
-        color: rgb(255, 255, 255);
+        color: lightpink;
         text-align:center;
         font-family:cambria;
         font-size: 25px;
@@ -125,8 +122,8 @@ box-sizing: border-box;
 .topo {
 padding: 30px 20px;
 text-align: center;
-background-color: #222;
-color: #fff;
+background-color: whitesmoke;
+color: black;
 }
 .conteudo {
 max-width: 1000px;
