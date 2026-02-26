@@ -5,6 +5,7 @@
       min-height: 100vh; /* makes sure border fills the screen */
       box-sizing: border-box; /* keeps border inside the viewport */
       } 
+
       body {
 font-family: Arial, sans-serif;
 margin: 0;
@@ -43,18 +44,8 @@ box-sizing: border-box;
     border-radius: 8px;
     width: 300px;
   }
-  
-.topo {
-padding: 30px 20px;
-text-align: center;
-background-color: whitesmoke;
-color: purple;
-}
-.conteudo {
-max-width: 1000px;
-margin: 30px auto;
-padding: 0 20px;
-}
+
+
 
 
 
