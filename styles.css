@@ -52,7 +52,7 @@ padding: 50px;
         background-color: purple;
         text-align:center;
         font-family:cursive;
-        font-size: 50px;
+        font-size: 40px;
       }
       h2{ /*text*/
         color:plum;
@@ -65,25 +65,25 @@ padding: 50px;
         background-color: palevioletred;
         text-align:center;
         font-family:cursive;
-        font-size: 40px;
+        font-size: 20px;
       }
       h4{ /*SUBSUB*/
         color:;
         text-align:center;
         font-family:verdana;
-        font-size: 25px;
+        font-size: 10px;
       }
      h5{ /**/
         color:;
         text-align:center;
         font-family:cambria;
-        font-size: 25px;
+        font-size: px;
       }
       h6{ /**/
         color:;
         text-align: center;
         font-family: Georgia;
-        font-size: 30px;
+        font-size: px;
       }
 
 
