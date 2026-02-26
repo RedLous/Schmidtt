@@ -48,7 +48,7 @@ padding: 50px;
       }
 
       h1{ /* title */
-        color:palevioletred;
+        color:whitesmoke;
         background-color: plum;
         text-align:center;
         font-family:cursive;
@@ -61,13 +61,18 @@ padding: 50px;
         font-size: 30px;
       }
       h3{ /* subtitle */
+        color:violet;
+        text-align:center;
+        font-family:cursive;
+        font-size: 20px;
+      }
+      h4{ /* subsub */
         color:plum;
         background-color: palevioletred;
         text-align:center;
         font-family:cursive;
         font-size: 20px;
       }
-
 
 
 /* Telemóvel */
