@@ -58,19 +58,19 @@ text-align: center;
         font-size: 50px;
       }
       h2{ /*text*/
-        color:purple;
+        color:violet;
         text-align:center;
         font-family:cursive;
         font-size: 30px;
       }
       h3{ /* subtitle */
-        color:palevioletred;
+        color:pink;
         text-align:center;
         font-family:cursive;
         font-size: 40px;
       }
       h4{ /**/
-        color:white;
+        color:plum;
         text-align:center;
         font-family:verdana;
         font-size: 25px;
@@ -82,7 +82,7 @@ text-align: center;
         font-size: 25px;
       }
       h6{ /**/
-        color: plum;
+        color: white;
         text-align: center;
         font-family: Georgia;
         font-size: 30px;
