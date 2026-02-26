@@ -62,6 +62,7 @@ padding: 50px;
       }
       h3{ /* subtitle */
         color:purple;
+        background-color: palevioletred;
         text-align:center;
         font-family:cursive;
         font-size: 40px;
