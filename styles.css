@@ -39,8 +39,7 @@ text-align: center;
 }
 
       header{
-        color:lightpink;
-        background:purple;
+        color:purple;
         text-align:center;
         font-family:cursive;
         font-size: 50px;
@@ -51,8 +50,9 @@ text-align: center;
         border: 0; 
         display: inline-block;
       }
+
       h1{ /* title */
-        color:pink;
+        color:palevioletred;
         text-align:center;
         font-family:cursive;
         font-size: 50px;
