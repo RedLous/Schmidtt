@@ -57,7 +57,7 @@ text-align: center;
         font-family:cursive;
         font-size: 50px;
       }
-      h2{ /* menu datetitle*/
+      h2{ /*text*/
         color:purple;
         text-align:center;
         font-family:cursive;
@@ -69,19 +69,19 @@ text-align: center;
         font-family:cursive;
         font-size: 40px;
       }
-      h4{ /* subsub */
+      h4{ /**/
         color:white;
         text-align:center;
         font-family:verdana;
         font-size: 25px;
       }
-     h5{ /* text */
+     h5{ /**/
         color: lightpink;
         text-align:center;
         font-family:cambria;
         font-size: 25px;
       }
-      h6{ /* extra */
+      h6{ /**/
         color: plum;
         text-align: center;
         font-family: Georgia;
