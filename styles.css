@@ -1,7 +1,7 @@
       body{
       margin: 0; /* removes default browser spacing */
-      background-color: rgb(255, 209, 255);
-      border: 20px solid #ffffff; /* thickness, style, color */
+      background-color: purple;
+      border: 20px solid white; /* thickness, style, color */
       min-height: 100vh; /* makes sure border fills the screen */
       box-sizing: border-box; /* keeps border inside the viewport */
       } 
@@ -31,7 +31,7 @@ flex-direction: column;
 gap: 20px;
 }
 .caixa {
-background-color: rgb(255, 255, 255);
+background-color: lightpink;
 padding: 40px;
 text-align: center;
 }
@@ -45,8 +45,8 @@ text-align: center;
 
 
       header{
-        color:purple;
-        background:lightpink;
+        color:pink;
+        background:purple;
         text-align:center;
         font-family:cursive;
         font-size: 50px;
@@ -88,7 +88,7 @@ text-align: center;
         font-size: 25px;
       }
       h6{ /* extra */
-        color: rgb(206, 169, 255);
+        color: plum;
         text-align: center;
         font-family: Georgia;
         font-size: 30px;
