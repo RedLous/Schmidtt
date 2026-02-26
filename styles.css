@@ -12,19 +12,6 @@ margin: 0;
 text-align: center;
 padding: 50px;
 }
-.container {
-display: flex;
-flex-direction: column;
-gap: 20px;
-}
-.caixa {
-background-color: lightcoral;
-padding: 40px;
-text-align: center;
-}
-* {
-box-sizing: border-box;
-}
 
   .popup {
     position: fixed;
