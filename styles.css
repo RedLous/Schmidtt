@@ -45,7 +45,7 @@ text-align: center;
 
 
       header{
-        color:pink;
+        color:lightpink;
         background:purple;
         text-align:center;
         font-family:cursive;
@@ -70,7 +70,7 @@ text-align: center;
         font-size: 30px;
       }
       h3{ /* subtitle */
-        color:purple;
+        color:palevioletred;
         text-align:center;
         font-family:cursive;
         font-size: 40px;
@@ -180,7 +180,7 @@ opacity: 0.85;
 }
 
 footer{
- color: rgb(255, 255, 255);
+ color: palevioletred;
  text-align: center;
  font-family: Georgia;
  font-size: 20px;
