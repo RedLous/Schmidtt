@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Medidor de Temperatura</title>
+<title>Hot or Cold</title>
 <link rel="stylesheet" href="styles.css">
 
 <style>
@@ -76,7 +76,7 @@
 
     <nav> 
     <a href="index.html">Home</a>
-    <a href="hobby.html">My Hobbies</a>
+    <a href="hobby.html">Hobbies</a>
     <br>
     <a href="galeria.html">Gallery</a>
     <a href="faq.html">FAQ</a>
@@ -86,16 +86,16 @@
   </nav>
 
 <div class="container">
-    <h2>Medidor de Temperatura</h2>
+    <h2>Temp measure!</h2>
 
     <input type="number" id="temperatura" placeholder="°C">
-    <button onclick="verificarTemperatura()">Verificar</button>
+    <button onclick="verificarTemperatura()">Check</button>
 
     <div class="barra-container">
         <div class="barra" id="barra"></div>
     </div>
 
-    <div id="status">Aguardando valor...</div>
+    <div id="status">Waiting Value...</div>
 </div>
 
 <script>
@@ -105,7 +105,7 @@ function verificarTemperatura() {
     let status = document.getElementById("status");
 
     if (isNaN(temp)) {
-        status.innerText = "Digite um valor válido!";
+        status.innerText = "Write some temperature!";
         return;
     }
 
@@ -119,18 +119,18 @@ function verificarTemperatura() {
     // Verificação
     if (temp < 15) {
         barra.style.background = "blue";
-        status.innerText = "Temperatura Baixa ❄️";
+        status.innerText = "Cold as F ❄️";
         status.className = "frio";
     } 
     else if (temp >= 15 && temp <= 30) {
         barra.style.background = "green";
-        status.innerText = "Temperatura Normal ✅";
+        status.innerText = "Meh Temp ✅";
         status.className = "normal";
     } 
     else {
         barra.style.background = "red";
-        status.innerText = "Temperatura Alta 🔥";
-        status.className = "quente";
+        status.innerText = "Hot as F 🔥";
+        status.className = "Hot";
     }
 }
 </script>
