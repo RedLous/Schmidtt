@@ -74,6 +74,8 @@
     <button onclick="ordenar()">Ordenar</button>
     <button onclick="limpar()">Limpar</button>
 
+    <button onclick="gerar()">Gerar 1 até N</button>
+
     <p id="mensagem"></p>
 
     <h3>Lista:</h3>
@@ -81,7 +83,48 @@
 
     <div id="resultados"></div>
 
+    <div id="sequencia"></div>
+
     <script>
+
+
+        function gerar() {
+    let input = document.getElementById("numero");
+    let valor = input.value;
+    let mensagem = document.getElementById("mensagem");
+    let seq = document.getElementById("sequencia");
+
+    mensagem.textContent = "";
+    seq.innerHTML = "";
+
+    if (valor === "" || isNaN(valor) || Number(valor) <= 0) {
+        mensagem.textContent = "Por favor insere um número válido maior que 0.";
+        return;
+    }
+
+    let n = Number(valor);
+    let pares = 0;
+    let impares = 0;
+
+    let resultado = "";
+
+    for (let i = 1; i <= n; i++) {
+        if (i % 2 === 0) {
+            resultado += i + " - Par<br>";
+            pares++;
+        } else {
+            resultado += i + " - Ímpar<br>";
+            impares++;
+        }
+    }
+
+    resultado += "<br><strong>Pares:</strong> " + pares + "<br>";
+    resultado += "<strong>Ímpares:</strong> " + impares;
+
+    seq.innerHTML = resultado;
+}
+
+
         let numeros = [];
 
         function adicionar() {
