@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Click the target minigame">
+  <title>Click the Target Game</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="minigame-body">
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="hobby.html">Hobbies</a>
+    <br>
+    <a href="galeria.html">Gallery</a>
+    <a href="faq.html">FAQ</a>
+    <br>
+    <a href="portfolio.html">Projects</a>
+    <a href="minigame.html">Minigame</a>
+    <br>
+
+  <div id="gameArea">
+    <div id="target"></div>
+  </div>
+
+  <!-- Sounds -->
+  <audio id="clickSound" src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_c8c8a73467.mp3?filename=click-124467.mp3"></audio>
+  <audio id="gameOverSound" src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_115b9b7c4c.mp3?filename=game-over-arcade-6435.mp3"></audio>
+
+  <script>
+    let score = 0;
+    let timeLeft = 10;
+    let gameInterval;
+    let timerInterval;
+
+    const target = document.getElementById("target");
+    const gameArea = document.getElementById("gameArea");
+    const clickSound = document.getElementById("clickSound");
+    const gameOverSound = document.getElementById("gameOverSound");
+
+    function moveTarget() {
+      const maxX = gameArea.clientWidth - target.clientWidth;
+      const maxY = gameArea.clientHeight - target.clientHeight;
+
+      const x = Math.random() * maxX;
+      const y = Math.random() * maxY;
+
+      target.style.left = x + "px";
+      target.style.top = y + "px";
+    }
+
+    function hitTarget() {
+      score++;
+      document.getElementById("score").textContent = score;
+
+      clickSound.currentTime = 0;
+      clickSound.play();
+
+      moveTarget();
+    }
+
+    // Support both click and touch
+    target.addEventListener("click", hitTarget);
+    target.addEventListener("touchstart", function(e) {
+      e.preventDefault();
+      hitTarget();
+    });
+
+    function startGame() {
+      score = 0;
+      timeLeft = 10;
+
+      document.getElementById("score").textContent = score;
+      document.getElementById("time").textContent = timeLeft;
+
+      moveTarget();
+
+      clearInterval(gameInterval);
+      clearInterval(timerInterval);
+
+      gameInterval = setInterval(moveTarget, 800);
+
+      timerInterval = setInterval(() => {
+        timeLeft--;
+        document.getElementById("time").textContent = timeLeft;
+
+        if (timeLeft <= 0) {
+          clearInterval(gameInterval);
+          clearInterval(timerInterval);
+
+          gameOverSound.play();
+
+          setTimeout(() => {
+            alert("Game Over! Your score: " + score);
+          }, 100);
+        }
+      }, 1000);
+    }
+  </script>
+
+</body>
+</html>

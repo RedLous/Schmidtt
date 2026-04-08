@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Temperature measurement tool">
+<title>Hot or Cold</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <nav>
+    <a href="index.html">Home</a>
+    <a href="hobby.html">Hobbies</a>
+    <br>
+    <a href="galeria.html">Gallery</a>
+    <a href="faq.html">FAQ</a>
+    <br>
+    <a href="portfolio.html">Projects</a>
+    <a href="minigame.html">Minigame</a>
+    <br>
+    <a href="htmlexercises.html">Exercises</a>
+  </nav>
+
+<div class="container">
+    <h2>Temp measure!</h2>
+
+    <input type="number" id="temperatura" placeholder="°C">
+    <button onclick="verificarTemperatura()">Check</button>
+
+    <div class="barra-container">
+        <div class="barra" id="barra"></div>
+    </div>
+
+    <div id="status">Waiting Value...</div>
+</div>
+
+<script>
+function verificarTemperatura() {
+    let temp = parseFloat(document.getElementById("temperatura").value);
+    let barra = document.getElementById("barra");
+    let status = document.getElementById("status");
+
+    if (isNaN(temp)) {
+        status.innerText = "Write some temperature!";
+        return;
+    }
+
+    // Ajuste da largura (escala até 50°C)
+    let porcentagem = (temp / 50) * 100;
+    if (porcentagem > 100) porcentagem = 100;
+    if (porcentagem < 0) porcentagem = 0;
+
+    barra.style.width = porcentagem + "%";
+
+    // Verificação
+    if (temp < 15) {
+        barra.style.background = "blue";
+        status.innerText = "Cold as F ❄️";
+        status.className = "frio";
+    } 
+    else if (temp >= 15 && temp <= 30) {
+        barra.style.background = "green";
+        status.innerText = "Meh Temp ✅";
+        status.className = "normal";
+    } 
+    else {
+        barra.style.background = "red";
+        status.innerText = "Hot as F 🔥";
+        status.className = "quente";
+    }
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Gerador de Tabuada</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+    <a href="index.html">Home</a>
+    <a href="hobby.html">Hobbies</a>
+    <br>
+    <a href="galeria.html">Gallery</a>
+    <a href="faq.html">FAQ</a>
+    <br>
+    <a href="portfolio.html">Projects</a>
+    <a href="minigame.html">Minigame</a>
+    <br>
+    <a href="htmlexercises.html">Exercises</a>
+  </nav>
+
+    <h1>Gerador de Tabuada</h1>
+
+    <input type="number" id="numero" placeholder="Insere um número">
+    <br>
+
+    <button onclick="gerarTabuada()">Gerar Tabuada</button>
+
+    <div id="resultado"></div>
+
+    <script>
+        function gerarTabuada() {
+            let input = document.getElementById("numero");
+            let valor = input.value;
+            let resultado = document.getElementById("resultado");
+
+            resultado.innerHTML = "";
+
+            if (valor === "" || isNaN(valor)) {
+                resultado.innerHTML = "Por favor insere um número válido.";
+                return;
+            }
+
+            let num = Number(valor);
+            let texto = "";
+
+            for (let i = 1; i <= 10; i++) {
+                texto += `${num} x ${i} = ${num * i} <br>`;
+            }
+
+            resultado.innerHTML = texto;
+        }
+    </script>
+
+</body>
+</html>
